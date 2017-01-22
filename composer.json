@@ -1,0 +1,19 @@
+{
+    "name": "starlabs/list",
+    "description": "Component list",
+    "type": "bitrix-component",
+    "authors": [
+        {
+            "name": "Nathan Stark",
+            "email": "stark@starlabs.su"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "./web/local/components/slabs/{$name}/": ["type:bitrix-component"]
+        }
+    },
+    "require": {
+        "composer/installers": "~1"
+    }
+}
