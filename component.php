@@ -62,7 +62,10 @@ if( $this->StartResultCache() ) {
         if( is_array($arParams["PROPERTIES"]) ) {
             foreach ($arParams["PROPERTIES"] as $property){
                 if ( strpos($property, "PICTURE") === false && strpos($property, "GALLERY") == false) {
-                    if( is_array($arElement["PROPERTY_".$property."_VALUE"]) )
+                    if(is_array($arElement["PROPERTY_".$property."_DESCRIPTION"]) )
+                        foreach ($arElement["PROPERTY_".$property."_DESCRIPTION"] as $key=>$value)
+                            $arFieldsResult[$property][$value] = $arElement["PROPERTY_".$property."_VALUE"][$key];
+                    elseif( is_array($arElement["PROPERTY_".$property."_VALUE"]) )
                         foreach ($arElement["PROPERTY_".$property."_VALUE"] as $value)
                             $arFieldsResult[$property][] = $value;
                     else
