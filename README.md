@@ -10,6 +10,9 @@
         "FILTER_NAME"   => "arrFilter",
         "CACHE_TIME"    => 36000000,
         "CACHE_TYPE"    => "A",
+        "FILTER" => [
+            "SECTION_ID" => 1
+        ],
         "FIELDS"        => [
             "DETAIL_TEXT"
         ],
@@ -19,6 +22,8 @@
     )
 ); ?>
 ```
+FILTER - Позволяет добавить правило фильтрации
+
 FIELDS -  Список полей.    
 Всегда по умолчанию добавляются "NAME", "IBLOCK_ID", "ID"
 

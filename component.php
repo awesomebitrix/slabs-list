@@ -20,6 +20,9 @@ if( $this->StartResultCache() ) {
         "ACTIVE"        => "Y",
     ];
 
+    if( is_array($arParams["FILTER"]) )
+        $arFilter = array_merge($arFilter,$arParams["FILTER"]);
+
     if( is_array($arParams["FIELDS"]) )
         $arFields = array_merge($arFields,$arParams["FIELDS"]);
 
